@@ -17,22 +17,24 @@ In program is a *vector* of *bytes* (data type), where:
  - 0 is empty space hwhere I can move
  - 1 is wall I can't get through
  - 2 is me 
- - 83 is start ('cuz 'S' in ASCII is 83)
- - 69 is end ('cuz 'E' in ASCII is 69)
-also, we can use 'S' & 'E' instead of 83 & 69.
+And coordinates where we start (column_start, row_end) and whre we end (column_end, row_end)
 
 #### For Example:
 
 **C++**:
 > vector<vector<byte>> maze = {
-> {83, 1, 0, 0, 1},
-> {0, 1, 0, 0, 69},
+> {0, 1, 0, 0, 1},
+> {0, 1, 0, 0, 0},
 > {0, 0, 0, 1, 1}
-> }
+> };
+> int column_start = 0, row_start = 0;
+> int column_end = 1, row_end = 4;
 
 **Golang**:
 > maze := [][]byte {
 > {83, 1, 0, 0, 1},
 > {0, 1, 0, 0, 69},
 > {0, 0, 0, 1, 1}
->
+> };
+> column_start, row_start := 0, 0;
+> column_end, row_end := 1, 4;
